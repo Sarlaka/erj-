@@ -1,0 +1,50 @@
+html,body,ul,li{
+    margin:0;
+    padding:0
+}
+ul{
+    list-style: none;
+}
+.submenu{
+    height: 0px;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+}
+.level1st a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    background: #cccccc;
+    position: relative;
+}
+.level2nd a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 200px;
+    text-align: center;
+    background: skyblue;
+}
+.level1st .active{
+    background: goldenrod;
+    color: skyblue;
+}
+.level1st .item::after{
+    display: block;
+    content:"";
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    position: absolute;
+    right: 45px;
+    top: 15px;
+    transform: rotate(45deg);
+    transition: all ease-in-out .3s;
+    transform-origin: 5px 5px;
+}
+.level1st .item.active::after{
+    transform: rotate(-135deg);
+}
